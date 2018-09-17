@@ -1,17 +1,30 @@
 @font-face {
-    font-family:SanFrancisco;
+    font-family: 'SanFrancisco';
     font-style:normal;
     font-weight:300;
     src: local('SanFrancisco'), local('SanFrancisco'),
-    url(../font/SFMono-Medium.otf);
+    url(../font/SFMono-Medium.otf)
+    ;
 }
 @font-face {
-    font-family: SFProDisplay;
+    font-family: 'SFProDisplay';
     font-style:normal;
     font-weight:300;
     src: local('SFProDisplay'), local('SFProDisplay'),
-    url(../font/SanFranciscoText-Regular.otf);
+    url(../font/SanFranciscoText-Regular.otf)
+    ;
 }
+
+.typo-bold {
+    font-family: SFProDisplay;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.32;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #ffffff;
+}
+
 body *{
    font-family: SFProDisplay;
 }
