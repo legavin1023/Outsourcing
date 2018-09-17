@@ -2183,7 +2183,7 @@ footer ul li{
     margin-top: 40px;
 }
 
-#C1 ul{
+#C1 >div>div>ul{
 width: 100%;
 margin: auto;
 font-size: 17px;
@@ -2192,26 +2192,219 @@ line-height: 70px;
  border-bottom: solid 3px #b7b7b7;
 height: 73px;
 }
-#C1 li{
+#C1 >div>div>ul li{
     position: relative;
     left: -283px;
     padding: 0px 35px;
     float: left;
 }
-#C1 li:first-of-type{
+#C1 >div>div>ul li:first-of-type{
     margin-left: 50%;
 }
-#C1 li a{
+#C1 >div>div>ul li a{
     cursor: pointer;
     display: block;
     z-index: 20;
     transition:1s;
 }
-#C1 li a:hover,#S1 li a.active{
+#C1 >div>div>ul li a:hover,#C1 >div>div>ul li a.active{
     color: #1457d7;
     border-bottom: solid 3px #1457d7;
 }
 
+ form {
+    width: 768px;
+    margin: auto;
+    margin-bottom: 90px;
+     
+}
+ form *{
+     color: #7a7d82;
+    width: 45%;
+    height: 46px;
+    margin:15px 2%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgba(20, 87, 215, 0.07);
+}
+textarea {
+    padding-top: 10px;
+    width: 95%;
+    height: 180px;
+    margin: auto;
+    overflow: scroll;
+    margin-top: 15px;
+}
+#tt2 textarea {
+    height: 260px;
+}
+#C1 dl li .nav_a{
+    color: #7a7d82;
+    text-decoration:none;
+    padding: 140px 40px 70px 40px;
+}
+#C1 dl  li .nav_a:hover{
+    color: #1457d7;
+}
+#tt2 >ul {
+    width: 768px;
+    height: 200px;
+    margin: auto;
+}
+#tt2 ul>li,#tt4 ul>li{
+    display: block;
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: solid 1px #979797;
+    font-size: 14px;
+    line-height: 80px;
+    
+    line-height: 220px;
+    margin: 0 12px; 
+}
+#tt4 ul>li{
+    line-height: 250px;
+}
+#tt4 ul:first-of-type{
+    width: 930px;
+    height: 200px;
+    margin: auto;
+}
+#tt4 ul:nth-of-type(2){
+    width: 740px;
+    height: 200px;
+    margin: auto;
+}
+#tt4 ul:nth-of-type(3){
+    width: 370px;
+    height: 300px;
+    margin: auto;
+}
+#tt4 img{
+    width: 30px;
+    height: auto;
+    margin: auto;margin-top: 80px;
+}
+#tt2 ul>li:hover,#tt4 ul>li:hover{
+    border: solid 1px #1457d7;
+    color: #1457d7;
+}
+#tt2 ul>li:nth-of-type(1){
+    background:url('../image/icon/tt2_1.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt2 ul>li:nth-of-type(2){
+    background:url('../image/icon/tt2_2.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt2 ul>li:nth-of-type(3){
+    background:url('../image/icon/tt2_3.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt2 ul>li:nth-of-type(4){
+    background:url('../image/icon/tt2_4.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(1)>li:nth-of-type(1){
+    background:url('../image/Community_1.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(1)>li:nth-of-type(2){
+    background:url('../image/Community_2.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(1)>li:nth-of-type(3){
+    background:url('../image/Community_3.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(1)>li:nth-of-type(4){
+    background:url('../image/Community_4.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(1)>li:nth-of-type(5){
+    background:url('../image/community_5.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(2)>li:nth-of-type(1){
+    background:url('../image/Telegram_1.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(2)>li:nth-of-type(2){
+    background:url('../image/Telegram_2.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(2)>li:nth-of-type(3){
+    background:url('../image/Telegram_3.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(2)>li:nth-of-type(4){
+    background:url('../image/Telegram_4.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(3)>li:nth-of-type(1){
+    background:url('../image/Technology_1.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt4 ul:nth-of-type(3)>li:nth-of-type(2){
+    background:url('../image/Technology_2.png') no-repeat;
+    background-position: center 40%;
+    background-size: 36%;
+}
+#tt2 ul{
+    width: 47%;
+    margin: auto;
+}
+.down_2{
+    position: relative;
+    top: 12px;
+    left: 132px;
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: url('../image/icon/down_2.png') no-repeat;
+    background-size: contain;
+    margin-right: 10px; 
+}
+.tt2_g{
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    height: 2px;
+    opacity: 0.2;
+    border-style: solid;
+    border-width: 1px;
+    border-image-source: linear-gradient(to left, rgba(0, 0, 0, 0), #000000 52%, rgba(0, 0, 0, 0));
+    border-image-slice: 1;
+}
+#tt3{
+    height: 500px;
+}
+#tt2 li,#tt4 li{
+    cursor: pointer;
+}
+
+#tt1,#tt2,#tt3,#tt4{
+    padding-bottom: 90px;
+}
 
 
 
