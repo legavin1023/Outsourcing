@@ -98,14 +98,12 @@
         </nav>
 
 
-        <script src="./js/jquery-1.12.4.min.js"></script>
+                <script src="./js/jquery-1.12.4.min.js"></script>
         </script>
              <!-- Swiper JS -->
         <script src="./js/swiper.min.js"></script>
         <script src="./js/M2.js"></script>
         <script src="./js/M3.js"></script>
-
-		
 
         <!-- Initialize Swiper -->
         <script>
@@ -162,10 +160,12 @@
             console.log(window.innerWidth);
         });
 </script>
+
+
    <script>
     $(document).ready(function(){			
 			$(".menu>a").click(function(){
-			var submenu = $(this).next("ul");	
+			var submenu = $("#right");	
 			if( submenu.is(":visible") ){
 				submenu.slideUp();
 				}else{
