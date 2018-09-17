@@ -107,41 +107,7 @@
         <!-- Initialize Swiper -->
 
    <script>  
-       
-       $(document).ready(function() {
-            function checkMobileDevice() {
-            var mobileKeyWords = new Array('Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
-            for (var info in mobileKeyWords) {
-                var device = false; 
-                if (navigator.userAgent.match(mobileKeyWords[info]) != null) {
-                    device = true;
-                    alert("true");
-
-                }
-            }
-            return false;
-                alert("false");
-        }
-           
-           if(return== false){
-            //창 가로 크기가 576보다 클 경우  
-             $(".menu li").click(function(){
-                $('ul:first',this).show();
-              }, function(){
-                $('ul:first',this).hide();
-              });
-              $(".menu>li:has(ul)>a").each( function() {
-                $(this).html( $(this).html()+' &or;' );
-              });
-              $(".menu ul li:has(ul)")
-                .find("a:first")
-                .append("<p style='float:right;margin:-3px'>&#9656;</p>");
-            console.log(windowWidth+"커");
-             
-                
-            }else{
-        //창 가로 크기가 576보다 작은 경우 
-             
+             $(document).ready(function() {
              var submenu = $("#right");
                 submenu.hide();
                $("#Solutions>ul").hide();
@@ -175,13 +141,9 @@
                     $("#About>ul").show();
                 }
             });
-            
-                console.log(windowWidth+"작아");
-		}
-           
-       })
-  
-      
+		}); 
+
+        
  
 </script>
 
