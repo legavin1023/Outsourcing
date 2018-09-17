@@ -107,12 +107,23 @@
         <!-- Initialize Swiper -->
 
    <script>  
-       $( window ).resize(function() {
-             var windowWidth = $( window ).width();
-             if(windowWidth > 561 && windowWidth <591){
-               location.reload();
-               }
-            if(windowWidth >= 576){
+       
+       $(document).ready(function() {
+            function checkMobileDevice() {
+            var mobileKeyWords = new Array('Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
+            for (var info in mobileKeyWords) {
+                var device = false; 
+                if (navigator.userAgent.match(mobileKeyWords[info]) != null) {
+                    device = true;
+                    alert("true");
+
+                }
+            }
+            return false;
+                alert("false");
+        }
+           
+           if(return== false){
             //창 가로 크기가 576보다 클 경우  
              $(".menu li").click(function(){
                 $('ul:first',this).show();
@@ -128,7 +139,7 @@
             console.log(windowWidth+"커");
              
                 
-            }else if(windowWidth <= 576){
+            }else{
         //창 가로 크기가 576보다 작은 경우 
              
              var submenu = $("#right");
@@ -167,9 +178,10 @@
             
                 console.log(windowWidth+"작아");
 		}
-//             console.log(windowWidth);
-        }); 
-        
+           
+       })
+  
+      
  
 </script>
 
