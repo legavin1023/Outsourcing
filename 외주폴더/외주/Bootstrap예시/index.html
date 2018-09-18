@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>블락지 코리아</title>
+	<link rel="shortcut icon" tyle"image/png" href="img/favicon.png"/>
+	<meta charset="utf-8">  
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<style>
+		body { font-size: 18px; line-height: 1.5; }		
+		section { padding-top: 100px; padding-bottom:100px; position: relative; }
+
+		.text-primary { color: #283593; }
+		
+		.btn { border-width: 0px; }
+		.btn-primary { background-color: #283593; }
+		.btn-primary:hover { background-color: #222745; }	
+		.btn-xl {
+			font-size: 16px; font-weight: 600; 			
+			padding: 15px 30px 15px 30px;   /* t, l, b, r */
+		}
+		.btn-xl.btn-capsule {
+			border-radius: 32px;
+		}
+		
+
+
+		.green-1 {color: rgba(40,53,147,1);}
+		.green-2 {color: rgba(55,142,67,1);}
+		.green-3 {color: rgba(37,104,53,1);}
+
+		.m-0 { margin: 0; }
+		.mb-1 { margin-bottom: 4px; }
+		.mb-2 { margin-bottom: 9px; }
+		.mb-3 { margin-bottom: 18px; }
+		.mb-4 { margin-bottom: 27px; }
+		.mb-5 { margin-bottom: 36px; }
+		.mb-6 { margin-bottom: 45px; }
+		.mb-7 { margin-bottom: 54px; }
+		.mb-8 { margin-bottom: 63px; }
+		.mb-9 { margin-bottom: 72px; }
+		.mb-10 { margin-bottom: 91px; }
+		.mb-11 { margin-bottom: 100px; }
+
+		.mr-3 { margin-right: 18px; }
+		.mr-5 { margin-right: 36px; }
+
+		.pl-3 { padding-left: 18px; }
+		.pr-3 { padding-right: 18px; }
+		.pr-5 { padding-right: 36px; }
+
+		.pt-5 { padding-top: 36px; }
+		.pb-5 { padding-bottom: 36px; }
+		.py-5 { padding-top: 36px; padding-bottom: 36px; }
+
+		.display-1 { font-size: 62px; font-weight: 800; }
+		.display-2 { font-size: 47.5px; font-weight: 800; line-height: 1.4; }
+		.display-3 { font-size: 48px; font-weight: 300; }
+		.display-4 { font-size: 24px; font-weight: 500; line-height: 1.3; }
+		.display-5 { font-size: 22px; font-weight: 300; }
+		.display-6 { font-size: 16px; font-weight: 300; }
+
+		.quote { font-size: 12px; font-weight: 200; color: rgba(150,150,150,1);}
+
+		.fw-100 { font-weight: 100 !important; }
+		.fw-200 { font-weight: 200 !important; }
+		.fw-300 { font-weight: 300 !important; }
+		.fw-500 { font-weight: 500 !important; }
+		.fw-600 { font-weight: 600 !important; }
+		.fw-800 { font-weight: 800 !important; }
+
+		.bg-image { background-position: center; background-size: cover; }
+		.bg-inverse { color: white; }
+
+		.bg-white-238 { background-color: rgba(238,238,238,1); }
+		.bg-white-245 { background-color: rgba(245,245,245,1); }
+		.bg-white-241 { background-color: rgba(241,241,241,1); border-bottom: 1px; border-color: }
+		.bg-white-246 { background-color: rgba(246,246,246,1); border-bottom: 1px; border-color: }
+		.bg-white-250 { background-color: rgba(250,250,250,1); border-bottom: 1px; border-color: }
+		
+
+
+		.bg-primary { background-color: #50b748; }
+
+		.dark-overlay { position: absolute; left:0; top: 0; width:100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 0;}
+		.dark-overlay + * { z-index: 1; position: relative; }
+		
+		.section-header {
+			margin-bottom:90px;
+			text-align: center;
+		}
+
+
+		
+		.btn-outline {
+			background-color: transparent;
+			background-color: none;
+			border-width: 1px;
+			border-radius: 18px;
+			margin-top:8px;"			
+		}
+		.btn-outline:hover {
+			background-color: transparent;
+		}
+		.btn-outline.btn-sm {
+			padding:4px 20px;
+			border-radius: 18px;				
+		}
+		.btn-outline.btn-default {
+			border-color: rgba(0,0,0,0.4);
+			color: rgba(0,0,0,0.7);
+		}
+		.btn-outline.btn-default:hover {
+			border-color: rgba(0,0,0,0.99);
+			color: rgba(0,0,0,0.9);	
+		}
+
+
+
+		/*NAVER MAP BUTTON*/
+		.btn-outline-naver {
+			background-color: none;
+			border-width: 1px;
+			border-radius: 18px;
+		}
+		.btn-outline-naver.btn-default {
+			border-color: rgba(40,53,147,1);
+			color: rgba(40,53,147,1);
+		}
+		.btn-outline-naver.btn-sm {
+			padding:4px 20px;
+			border-radius: 18px;				
+		}
+		.btn-outline-naver.btn-default:hover {
+			border-color: rgba(40,53,147,0.5);
+			color: rgba(40,53,147,0.5);	
+		}
+
+
+		/*GOOGLE MAP BUTTON*/
+		/*.btn-outline-google {
+			background-color: none;
+			border-width: 1px;
+			border-radius: 18px;
+		}
+		.btn-outline-google.btn-default {
+			border-color: rgba(30,136,229,1);
+			color: rgba(30,136,229,1);
+		}
+		.btn-outline-google.btn-sm {
+			padding:4px 20px;
+			border-radius: 18px;				
+		}
+
+		.btn-outline-google.btn-default:hover {
+			border-color: rgba(30,136,229,1);
+			color: rgba(30,136,229,1);	
+		}*/
+
+
+
+
+		.cirlcle {
+			border-width: 2px;
+			border-color: rgba(40,53,147,0.5);
+			height: 300px;
+			border-radius: 150px;
+		}
+
+		.sample-box {
+			position: relative;
+			background-color:  rgba(40,53,147,1);
+			padding: 20px;
+			margin-bottom: 18px;			
+			height: 300px;
+			color: white;
+		}
+
+		.sample-box:hover {
+			position: relative;
+			background-color:  rgba(34,39,40,1);
+			padding: 20px;
+			margin-bottom: 18px;			
+			height: 300px;
+		}
+		
+
+
+
+		/*.sample-box .content {
+			position: absolute;
+			left:0; width: 100%;
+			bottom: 0px; height: auto;
+			padding: 0px 18px 18px 18px;
+		}*/
+		.sample-box .content {
+			position: absolute;
+			left:30px; right:15px; bottom:15px;
+			/*padding-top: 30px;*/
+
+		}
+		.sample-box .number {
+			position: absolute;
+			padding: 5px 10px 0px 10px;
+			margin: 0px;
+		}
+
+
+
+		.service-box {
+			position: relative;
+			background-color:  rgba(250,250,250,1);
+			height: 500px;
+			padding: 25px;
+			margin: 0px 10px 0px 10px;
+			box-shadow: 1px 2px 4px rgba(0,0,0,0.25);
+			margin-bottom: 20px;
+		}
+		.service-image-box{
+			height: 150px;
+			margin-top: 40px;
+		}
+		.service-image{
+			height: 110%;		
+		}
+		.service-contents{
+			margin-top: 50px;
+		}
+
+		.text-center{
+			text-align: center;
+		}
+
+		.ko-wrap-fix > span { white-space: nowrap; }
+
+
+		.border-normal { border: 1px solid #ccc; }
+		.border-primary { border: 1px solid #222745; }
+		.border-t-normal { border-top: 1px solid #ccc; }
+		.border-b-normal { border-bottom: 1px solid #ccc; }
+		.border-tb-normal { border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; }
+
+		.icon{
+			margin-right: 10px;
+		}
+
+
+
+
+		/*Media Query*/
+
+		/*iphone se*/
+		@media (max-width: 374px) {
+			.display-1 { font-size: 16px; font-weight: 800; }
+			.display-2 { font-size: 18px; font-weight: 800; line-height: 1.4; }
+			.display-3 { font-size: 14px; font-weight: 300; }
+			.display-5 { font-size: 6px; font-weight: 300; }
+		}
+
+		/*small device*/
+		@media (max-width: 767px) {
+			.display-1 { font-size: 32px; font-weight: 800; }
+			.display-2 { font-size: 32px; font-weight: 800; line-height: 1.4; }
+			.display-3 { font-size: 28px; font-weight: 300; }
+			.display-5 { font-size: 16px; font-weight: 300; }
+		}
+
+		/*medium device*/
+		@media (max-width: 991) {
+			.display-1 { font-size: 32px; font-weight: 800; }
+			.display-2 { font-size: 32px; font-weight: 800; line-height: 1.4; }
+			.display-3 { font-size: 28px; font-weight: 300; }
+			.display-5 { font-size: 12px; font-weight: 300; }
+		}
+
+		/*large device*/
+		@media (min-width: 992) {
+			.display-1 { font-size: 32px; font-weight: 800; }
+			.display-2 { font-size: 32px; font-weight: 800; line-height: 1.4; }
+			.display-3 { font-size: 28px; font-weight: 300; }
+			.display-5 { font-size: 12px; font-weight: 300; }
+		}
+
+
+		.navbar{
+			min-height: 60px;
+			border-radius: 0px;
+		}
+		.navbar-brand {
+			    padding: 9px 12px;
+		}
+		.content-img {
+			margin-top:40px;
+			margin-left: 68%;
+		}
+		.navbar-default .navbar-nav>li>a {
+			color: #212121;
+			font-size: 17px;
+			font-weight: 500;
+		}
+
+		</style>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-104548794-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+</head>
+
+
+
+
+
+
+<body>
+
+
+	<!--네비게이션-->
+	<nav class="navbar navbar-default" style="position:fixed; top:0; width:100%; z-index:1000;">
+	  <div class="container" style="margin-top:7px;">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">
+	      	<div style="height:100%">
+	      		<img src="img/logo.png" style="max-height:110%;">
+	      	</div>
+	      </a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	      	<!-- <li><a href="#home">홈</a></li> -->
+	        <li><a href="#01">회사소개</a></li>	
+	        <li><a href="#02">교육자료</a></li>	           
+	        <li><a href="#03">연구자문 활동</a></li>
+	        <li><a href="#04">교육영상</a></li>
+	        <li><a href="#05">오시는 길</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+
+
+	<!--홈-->
+
+	<section class="bg-image bg-inverse" style="background-image: url(img/bg1.png); padding-top:500px; padding-bottom:150px; margin-top:50px;">
+		<!--<div class="dark-overlay"></div> -->
+		<div class="container text-center">
+			<!--<h1 class="display-2 ko-wrap-fix m-0 mb-0">2018 암호화폐 <br class="hidden-sm hidden-md hidden-lg">투자자를 위한 필독서</h1>
+			<h1 class="display-4 ko-wrap-fix fw-300 mb-0" style="margin-top:3px;">알트코인 누가 살아남을 것인가?<br class="hidden-lg"> 현존하는 알트코인의 99%는 사라진다.</h1>
+			<p class="display-5 ko-wrap-fix" style="font-size:18px; margin-top:20px; color:rgba(250,250,250,0.7);">2018년 2월 27일 출간</p>		
+		</div>-->
+	</section>
+
+
+
+	
+
+	<!--회사 소개-->
+	<a name="01"></a>
+	<section>
+		<div class="container" xx-style="max-width:768px;">
+			<div class="section-header mb-3 x-border-primary">
+				<h2 class="display-3">회사소개</h2>
+				<P class="ko-wrap-fix fw-200" style="margin-top:20px;">
+					블락지는 연구와 교육을 바탕으로 블록체인기술과 암호화폐의 상용화를 위해 노력하는 기업입니다. <span>국내 최고수준의 블록체인 및 코인전문가가 직접 다수의 연구를 진행하고 그에 맞는 교육프로그램까지 제공하고 있습니다.</span>
+				</P>
+			</div>
+
+			<div class="row mb-5 x-border-primary">
+				<!-- <div class="visible-lg col-lg-1 bg-white-245"></div> -->
+
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="service-box text-center">
+
+						<div class="service-image-box">
+							<img class="service-image" src="img/icon_1.png">
+						</div>
+
+						<div class="service-contents">
+							<h3 class="mb-3">
+								연구 [Research]
+							</h3>
+							<p class="display-6 fw-200 ko-wrap-fix text-left">
+								블락지는 코인시장의 미래를 정확히 예측하고 미래에 살아남을 코인을 분류, 분석하는 업무를 주로 다루고 있습니다.
+								</br>
+								더욱 나아가 정부정책이나 기업의 참여, 개인 투자자의 결정이 시장과 특정코인에 미치는 영향을 실시간으로 분석하고 있습니다.
+							</p>
+						</div>
+					</div>
+				</div>				
+
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="service-box text-center">
+						<div class="service-image-box">
+							<img class="service-image" src="img/icon_2.png">
+						</div>
+						<div class="service-contents">
+							<h3 class="mb-3">
+								교육 [Education]
+							</h3>
+							<p class="display-6 fw-200 ko-wrap-fix text-left">
+								블락지는 연구자료를 바탕으로 암호화폐전문 언론인과 블록체인을 활용하려는 기업을 대상으로 맞춤형 교육을 진행하고 있습니다. 뿐만아니라, 개인 투자자에게 시장의 흐름을 정확히 이해하고 코인거래에 대한 견해를 길러주는 교육을 제공하고 있습니다.
+							</p>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="service-box text-center">
+						<div class="service-image-box">
+							<img class="service-image" src="img/icon_3.png">
+						</div>
+						<div class="service-contents">
+							<h3 class="mb-3">
+								정보제공 [Channel]
+							</h3>
+							<p class="display-6 fw-200 ko-wrap-fix text-left">
+								블락지는 연구결과와 실시간뉴스 및 현상에 대한 분석을 다양한 채널을 통해 대중에게 제공하고 있습니다.
+								</br>
+								책, 교육자료, 무료강연등을 통해 투자자들을 위한 정확한 정보와 리스크관리를 집중적으로 다루고 있습니다.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- <div class="visible-lg col-lg-1 bg-white-245"></div> -->
+			</div>
+		</div>
+	</section>
+
+
+
+	<!--교육자료 다운로드-->
+	<a name="02"></a>
+	<section class="bg-white-250 border-tb-normal">
+		<div class="container text-center">
+			<h2 class="text-primary mb-3 ko-wrap-fix" style="line-height:1.3;">
+				교육프로그램 소개서 다운로드
+			</h2>
+			<div class="row mb-4 mb-7">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8 col-md-8 display-5 ko-wrap-fix"> 
+					블락지는 블록체인에 대한 잘못된 견해, 인식 그리고 논쟁을 바로잡기 위한 교육프로그램을 제공하고 있습니다. 고객의 이해상황과 환경을 고려해 설계된 <span>맞춤형 교육을 제공하고 있습니다.</span>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+
+			<p>
+				<a href="https://www.dropbox.com/s/zt2u909y8uxin2j/Dropbox%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.pdf?dl=0"
+					target="_blank"
+					class="btn btn-xl btn-primary btn-capsule">
+					교육자료 다운로드
+				</a>
+			</p>
+		</div>
+	</section>
+
+
+
+
+	<!-- 연구자문활동 기사 -->
+	<a name="03"></a>
+	<section>
+		<div class="container">
+			<div class="section-header">
+				<h2 class="display-3">연구 자문 활동</h2>
+				<p class="ko-wrap-fix fw-200">
+					언론을 통해 알아보는 블락지의 주요활동
+				</p>
+			</div>
+			
+			<div class="row">
+				<a href="http://www.edaily.co.kr/news/news_detail.asp?newsId=02145126619073784&mediaCodeNo=257&OutLnkChk=Y" class="col-sm-12 col-md-6 col-lg-4">
+					<div class="sample-box">
+						<h5 class="display-4 number">01</h5>
+						<div class="content-img">
+							<div style="height: 90px">
+								<img src="img/content1.png" style="max-height:100%">
+							</div>
+						</div>
+						<div class="content">
+							<h3 class="fw-600">
+								암호화폐 강연 개최
+							</h3>
+							<p class="fw-200 small">
+								2017. 01. 01 이데일리
+							</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="http://www.edaily.co.kr/news/news_detail.asp?newsId=02384566619076080&mediaCodeNo=257&OutLnkChk=Y" class="col-sm-12 col-md-6 col-lg-4">
+					<div class="sample-box">
+						<h5 class="display-4 number">02</h5>
+						<div class="content-img">
+							<div style="height: 90px">
+								<img src="img/content2.png" style="max-height:100%">
+							</div>
+						</div>
+						<div class="content">
+							<h3 class="fw-600">
+								가상화폐 기사 자문
+							</h3>
+							<p class="fw-200 small">
+								2017. 01. 08 이데일리
+							</p>			
+						</div>
+					</div>
+				</a>
+
+				<a href="http://www.edaily.co.kr/news/news_detail.asp?newsId=02496086619076080&mediaCodeNo=257&OutLnkChk=Y" class="col-sm-12 col-md-6 col-lg-4">
+					<div class="sample-box">
+						<h5 class="display-4 number">03</h5>
+						<div class="content-img">
+							<div style="height: 90px">
+								<img src="img/content3.png" style="max-height:100%">
+							</div>
+						</div>
+						<div class="content">
+							<h3 class="fw-600">
+								가상화폐 관련정보 제공
+							</h3>
+							<p class="fw-200 small">
+								2017. 01. 08 이데일리
+							</p>		
+						</div>
+					</div>
+				</a>
+
+				<a href="http://www.edaily.co.kr/news/news_detail.asp?newsId=02669926619076080&mediaCodeNo=257&OutLnkChk=Y" class="col-sm-12 col-md-6 col-lg-4">
+					<div class="sample-box">
+						<h5 class="display-4 number">04</h5>
+						<div class="content-img">
+							<div style="height: 90px">
+								<img src="img/content4.png" style="max-height:100%">
+							</div>
+						</div>
+						<div class="content">
+							<h3 class="fw-600">
+								국내시장 관련정보 제공
+							</h3>
+							<p class="fw-200 small">
+								2017. 01. 08 이데일리
+							</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="http://www.edaily.co.kr/news/news_detail.asp?newsId=01357926619076408&mediaCodeNo=257&OutLnkChk=Y" class="col-sm-12 col-md-6 col-lg-4">
+					<div class="sample-box">
+						<h5 class="display-4 number">05</h5>
+						<div class="content-img">
+							<div style="height: 90px">
+								<img src="img/content5.png" style="max-height:100%">
+							</div>
+						</div>
+						<div class="content">
+							<h3 class="fw-600">
+								국내 투기 및 가격조정 관련 자문
+							</h3>
+							<p class="fw-200 small">
+								2017. 01. 09 이데일리
+							</p>
+						</div>			
+					</div>
+				</a>
+
+				<a href="http://www.news2day.co.kr/97855" class="col-sm-12 col-md-6 col-lg-4">
+					<div class="sample-box">
+						<h5 class="display-4 number">06</h5>
+						<div class="content-img">
+							<div style="height: 90px">
+								<img src="img/content6.png" style="max-height:100%">
+							</div>
+						</div>
+						<div class="content">
+							<h3 class="fw-600">
+								국내시장 관련정보 제공
+							</h3>
+							<p class="fw-200 small">
+								2018. 01. 18 뉴스 투데이
+							</p>
+						</div>		
+					</div>
+				</a>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- 교육영상 -->
+	<a name="04"></a>
+	<section class="bg-white-250 border-tb-normal">
+		<div class="container">
+			<div class="section-header">
+				<H2 class="display-3">
+					오픈 교육영상
+				</H2>
+				<P class="fw-200 ko-wrap-fix">
+					암호화폐에 대한 인식개선을 <span>위한 정보제공활동</span>
+				</P>
+			</div>
+
+			<div class="row">				
+
+				<div class="col-sm-12 col-md-4 pr-3 mb-5">
+					<div class="media">
+						<div class="media-left pr-4">
+							<img src="img/logo_2.png" style="width:120px; height:120px; margin-right:10px;">
+						</div>
+						<div class="media-body fw-300">							
+							<h3 class="media-heading" style="font-weight:700">블록체인 이해하기</h3>
+							<p class="display-6 ko-wrap-fix">
+								4차 산업혁명과 블록채인 <span>쉽게 이해하기</span>
+							</p>
+							<a class="btn btn-outline btn-default btn-sm" href="https://www.youtube.com/watch?v=EydJ7qwmCos" target="_blank">
+								바로가기
+							</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- <div class="col-sm-2 hidden-sm"></div> -->
+
+				<div class="col-sm-12 col-md-4 pl-3 mb-5">
+					<div class="media">
+						<div class="media-left pr-4">
+							<img src="img/logo_3.png" style="width:120px; height:120px; margin-right:10px;">
+						</div>
+						<div class="media-body fw-300">
+							<h3 class="media-heading" style="font-weight:700">살아남는 알트코인은?</h3>
+							<p class="display-6 ko-wrap-fix">
+								수 많은 알트코인중 <span>누가 살아남을 것인가?</span>
+							</p>
+							<a class="btn btn-outline btn-default btn-sm" href="https://youtu.be/FnTTH3RJGDk" target="_blank">
+								바로가기
+							</a>
+						</div>
+					</div>	
+				</div>
+
+				<div class="col-sm-12 col-md-4 pl-3 mb-5">
+					<div class="media">
+						<div class="media-left pr-4">
+							<img src="img/logo_4.png" style="width:120px; height:120px; margin-right:10px;">
+						</div>
+						<div class="media-body fw-300">
+							<h3 class="media-heading" style="font-weight:700">비트코인은 화폐인가?</h3>
+							<p class="display-6 ko-wrap-fix">
+								의미없는 논쟁: <span>비트코인 화폐인가?</span>
+							</p>
+							<a class="btn btn-outline btn-default btn-sm" href="https://youtu.be/-ScmGaEjRrY" target="_blank">
+								바로가기
+							</a>
+						</div>
+					</div>	
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- 찾아오시는 길 -->
+	<a name="05"></a>
+	<section style="position: relative;">
+		<div style="position:absolute; left:0; right:0; bottom:7%; top:40%;"></div>
+		<div class="container"  style="max-width:768px;">
+		
+			<div class="section-header">
+				<H2 class="display-3">
+					찾아오시는 길
+				</H2>
+				<P class="fw-200 ko-wrap-fix">
+					블락지는 서대문구에 위치해 있습니다.
+				</P>
+			</div>
+			
+			<div class="row">
+				<figure class="col-sm-12 mb-9" style="box-shadow: 1px 2px 4px rgba(0,0,0,0.25);">
+					<img style="max-width: 100%" src="img/map.png">
+				</figure>
+			</div>	
+			
+			<div class="row mb-0">
+				<div class="col-sm-6 mb-1">
+					<h3 class="fw-600">
+						<i class="fa fa-map-marker text-primary icon mb-2"></i>
+						주소
+					</h3>
+					<p class="ko-wrap-fix">
+						서울특별시 서대문구 경기대로 11길 26-6 </br>
+						(우진빌딩) 2층
+					</p>
+					<p class="ko-wrap-fix quote">
+						서울특별시 서대문구 충정로 2가 65-19 (우진빌딩) 2층
+					</p>
+					<a href="http://map.naver.com/?eelng=&elng=09230246802cbf6f4cae507ba50bcc21&eelat=&elat=553216100ebd82c5afd97462fc27a7ce&eText=%ED%8A%B8%EB%A6%AC%EB%AA%A8%EB%A6%AC">
+						<button class="btn btn-outline-naver btn-default btn-sm">네이버 지도</button>
+					</a>
+					<!-- <a href="http://map.naver.com/?eelng=&elng=09230246802cbf6f4cae507ba50bcc21&eelat=&elat=553216100ebd82c5afd97462fc27a7ce&eText=%ED%8A%B8%EB%A6%AC%EB%AA%A8%EB%A6%AC">
+						<button class="btn btn-outline-google btn-default btn-sm">구글 지도</button>
+					</a> -->
+				</div>
+
+
+				<div class="col-sm-3">
+					<h3 class="fw-600">
+						<i class="fa fa-phone text-primary icon mb-2"></i>연락처
+					</h3>
+					<p>
+						TEL.070-8873-1611
+						<span>FAX.02-557-1611</span>
+					</p>
+				</div>
+
+				<div class="col-sm-3">
+					<h3 class="fw-600">
+						<i class="fa fa-envelope text-primary icon mb-2"></i>이메일
+					</h3>
+					<p>
+						contact@blockz.kr
+					</p>
+				</div>
+
+
+
+			</div>
+		</div>
+	</section>
+	<section style= "padding-top:10px;">
+
+		<div class="container"  style="max-width:768px;">
+			<div class="row mb-1">
+				<div class="col-sm-6 mb-6">
+					<h3 class="fw-600">
+						<i class="fa fa-subway text-primary icon mb-2"></i>
+						지하철 이용시
+					</h3>
+					<p>
+						지하철 5호선 서대문역 2번출구 도보 7분거리</br>
+						(우진빌딩 2층에 위치해 있습니다)
+					</p>
+				</div>
+
+				<div class="col-sm-6 mb-6">
+					<h3 class="fw-600">
+						<i class="fa fa-car text-primary icon mb-2"></i>
+						자가용 이용시
+					</h3>
+					<p>
+						‘우진빌딩’ 혹은 ‘경기대로 11길 26-6’로</br>네비게이션 검색
+					</p>
+				</div>
+
+				<div class="col-sm-6 mb-6">
+					<h3 class="fw-600">
+						<i class="fa fa-info-circle text-primary icon mb-2"></i>
+						주차안내
+					</h3>
+					<p>
+						바로 옆에 주차장이 있습니다.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--문의-->
+	<!--<a name="06"></a>
+	<section class="border-tb-normal">
+		<div class="container text-center">
+			<h2 class="text-primary mb-3 ko-wrap-fix" style="line-height:1.3;">
+				교육프로그램 소개서 다운로드
+			</h2>
+			<div class="row mb-4 mb-7">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8 col-md-8 display-5 ko-wrap-fix"> 
+					블락지는 블록체인에 대한 잘못된 견해, 인식 그리고 논쟁을 바로잡기 위한 교육프로그램을 제공하고 있습니다. 고객의 이해상황과 환경을 고려해 설계된 <span>맞춤형 교육을 제공하고 있습니다.</span>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+
+			<p>
+				<a href="https://www.dropbox.com/s/zt2u909y8uxin2j/Dropbox%20%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.pdf?dl=0"
+					target="_blank"
+					class="btn btn-xl btn-primary btn-capsule">
+					교육자료 다운로드
+				</a>
+			</p>
+		</div>
+	</section>-->
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- footer -->
+	<footer class="bg-white-246 py-5 small border-t-normal">
+		<div class="text-center container">
+			<div class="fw-500">
+				© 2018 Block Z Korea, Inc. All rights reserved.
+			</div>
+			<div class="ko-wrap-fix">
+				서울특별시 서대문구 경기대로 11길 26-6 2층 <span>TEL. 070-8873-1611 FAX. 02-557-1611</span>
+			</div>
+			<div class="ko-wrap-fix">
+				사업자 등록번호: 150-86-00653 <span>대표이사: 함정수</span> 
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function($) { 
+	      $('.ko-wrap-fix').each(function() {    
+	        Array.from(this.childNodes).forEach(function(child) {
+	          child.nodeType==3 && $(child).replaceWith( child.textContent.split(/\s{1,}/).map(function(w) { return '<span>'+w+'</span>'; }).join(' ') );                      
+	        });
+	      });
+	    });
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+</body>
+
+
+
+
+
+
+
+
+
+</html>

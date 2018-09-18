@@ -1,0 +1,123 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/*border: 1px solid #000;*/
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	           content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+	text-decoration: none;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+/*-----------------------------------------------------------------------------*/
+body{}
+
+article.product {width: 1170px;margin: 0 auto; margin-top: 40px;}
+article.product ul {display:inline-block; width:1170px;}
+article.product ul li{float:left;}
+
+.area-img{width:530px; padding-right:70px;}
+.area-img dl{}
+.area-img dl dt{width:530px;margin-bottom:40px;}
+.area-img dl dt img{width: 100%;}
+.area-img dl dd{float:left; width:102px; height:68px;padding-right:41px;}
+.area-img dl dd:last-child {padding: 0px;}
+.area-img dl dd:nth-child(2) {padding-right:40px;}
+.area-img dl dd a{display: block; cursor:pointer; height:68px;
+	background:url('../images/photo.jpg')no-repeat;
+	overflow:hidden; line-height:0; font-size:0; text-indent:-999px;}
+.area-img dl dd a.active {  width:100px; height:66px;  border:1px solid #ac9455; border-radius: 10px;}
+.area-img dl dd .photo-btn-1 {background-position:0px -10px;}
+.area-img dl dd .photo-btn-2 {background-position:-100px -10px;}
+.area-img dl dd .photo-btn-3 {background-position:-200px -10px;}
+.area-img dl dd .photo-btn-4 {background-position:-300px -10px;}
+
+.area-txt { width:570px;}
+.area-txt dl{}
+.area-txt dl dt{font-size:45px;font-weight: 900;line-height:50px; margin-bottom: 25px;}
+.area-txt dl dd{}
+.area-txt dl dd span {}
+.area-txt dl dd span:first-child{font-size:34px;color:#ac9455;margin-right:40px;}
+.area-txt dl dd span:nth-child(2){font-size:19px;color:#9c9c9c;text-decoration:line-through;}
+.area-txt dl dd p{padding: 25px 0;font-size: 14px;line-height: 19px;color:#898989;}
+
+.size{width:570px;}
+.size dl{width: 100%}
+.size dl dt{font-size: 12px; margin-bottom: 25px;}
+.size dl dd{ float: left;}
+.size dl dd a{display: block;cursor: pointer;margin: 0 0 9px 9px;width: 40px;height: 40px;line-height: 40px;text-align: center;font-size: 14px;border: 1px solid #e5e5e5; border-radius: 5px;}
+.size dl dd a:hover {background-color: #ac9455; color: #fff;cursor: pointer;transition: all 0.3s ease;}
+.gray{background-color: #e5e5e5;color: #fff;}
+.gray:hover{background-color: #e5e5e5;color: #fff;}
+
+.number{width:128px; margin: 25px 0 0px 0;}
+.number dl{clear: both;}
+.number dl dt{font-size: 12px; margin-bottom: 20px;}
+.number dl dd{}
+.number dl dd input{float:left;display:inline-block;width:40px;height:40px;
+border:1px solid #e5e5e5;border-radius: 5px;background-color:#fff;text-align: center;font-size:14px;box-sizing: border-box;}
+/*box-sizing: border-box; 보더 선이 박스랑 짝짜꿍*/
+.number dl dd input:nth-child(2){}
+
+.color{width:350px;margin: 25px 0 40px 45px;}
+.color dl{}
+.color dl dt{font-size: 12px; margin-bottom: 25px;}
+.color dl dt dd{}
+.color dl dd a{border: 3px solid #fff;display: block;float: left;margin-right: 10px;width: 15px;height: 15px;border-radius: 15px;background-color: #a75437;overflow:hidden; line-height:0; font-size:0; text-indent:-9999px;}
+.color dl dd:nth-child(3) a{background-color: #2b2b2b;}
+.color dl dd:nth-child(4) a{background-color: #f6c100;}
+.color dl dd a:hover{border: 3px solid #e5e5e5;transition: all 0.3s ease;}
+
+.add{margin-right: 20px; }
+.add a{background-color: #fff;}
+.add a:hover{background-color: #ac9455; color: #fff;cursor: pointer;transition: all 0.3s ease;}
+
+.buy{}
+.buy a{background-color: #ac9455; color: #fff;}
+.buy a:hover{background-color: #fff; color: #000;cursor: pointer;transition: all 0.3s ease;}
+
+.add a, .buy a{display: block;width: 170px; height: 46px;border: 2px solid #ac9455;border-radius: 46px;line-height: 46px; text-align: center;font: 12px;}
