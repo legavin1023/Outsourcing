@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+       <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/swiper_M.css">
+        <link rel="stylesheet" type="text/css" href="./css/index_m.css" />  
+                
+        <style type="text/css">
+            html, body{
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    
+        <title></title>
+    </head>
+    <body>
+       <nav class='menu-bar menu-fff no-bar'>
+          <ul class="menu">
+           <a><img src="./image/icon/nav-icon.png" alt=""></a>
+            <li><a href="./index.html" class="nav_a logo">&nbsp;</a></li>
+                <div id="right" class="hide">
+                    <li  id="Solutions"><a class="nav_a top down">Solutions</a>
+                      <ul>
+                        <li>
+                           <a href="./solutions_Overview.html" class="nav_a">
+                                <span>&nbsp;</span>
+                                <p>Overview<span>Trading Bot</span></p>
+                            </a>
+                        </li>
+                        <li>
+                           <a href="./solutions_WhaleSlayer.html" class="nav_a">
+                                <span>&nbsp;</span>
+                                <p>WhaleSlayer<span>Trading Bot</span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./solution_BTS.html" class="nav_a">
+                                <span>&nbsp;</span>
+                                <p>Bot Trading System<span>Trading Tool</span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./solutions_KBOT%20Store.html" class="nav_a">
+                                <span>&nbsp;</span>
+                                <p>KBOT Store &amp; B-Code<span>Bot Builder</span></p>
+                            </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="./KBOT%20Sale.html" class="nav_a top">KBOT Sale</a></li>
+                    <li id="Documents"><a class="nav_a top down">Documents</a>
+                      <ul >
+                       <li>
+                            <a href="./Documents.html" class="nav_a">
+                                <span>&nbsp;</span>
+                                <p>Documents<span>Bot Builder</span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./Documents_PressCenter.html" class="nav_a">
+                                <span>&nbsp;</span>
+                                <p>Media<span>Bot Builder</span></p>
+                            </a>
+                        </li>
+                        </li>
+                      </ul>
+                    </li>
+                    <li id="About"><a class="nav_a top down">About</a>
+                      <ul>
+                        <li>
+                            <a href="./About_OurCompany.html" class="nav_a ">
+                                <span>&nbsp;</span>
+                                <p>Our Company<span>Bot Builder</span></p>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="./About_Careers.html" class="nav_a">
+                                <span>&nbsp;</span>
+                                <p>Careers<span>Bot Builder</span></p>
+                            </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="./contact.html" class="nav_a top">Contact</a></li>
+                    <li><a href="https://medium.com/korbotplatform" class="nav_a top">Blog <span class="blog">&nbsp;</span></a>
+                </div>
+            </ul>
+        </nav>
+
+
+                <script src="./js/jquery-1.12.4.min.js"></script>
+        </script>
+             <!-- Swiper JS -->
+        <script src="./js/swiper.min.js"></script>
+        <script src="./js/M2.js"></script>
+        <script src="./js/M3.js"></script>
+
+        <!-- Initialize Swiper -->
+
+   <script>  
+             $(document).ready(function() {
+             var submenu = $("#right");
+                submenu.hide();
+               $("#Solutions>ul").hide();
+                $("#Documents>ul").hide();
+                $("#About>ul").hide();
+			$(".menu>a").click(function(){
+			if( submenu.is(":visible") ){
+				submenu.slideUp();
+				}else{
+					submenu.slideDown();
+				}
+			});
+            $("#Solutions").click(function(){
+			if( $("#Solutions>ul").is(":visible") ){
+				$("#Solutions>ul").hide();
+            }else{
+                $("#Solutions>ul").show();
+            }
+			});
+             $("#Documents").click(function(){
+                if( $("#Documents>ul").is(":visible") ){
+                    $("#Documents>ul").hide();
+                }else{
+                    $("#Documents>ul").show();
+                }
+            });
+             $("#About").click(function(){
+                if( $("#About>ul").is(":visible") ){
+                    $("#About>ul").hide();
+                }else{
+                    $("#About>ul").show();
+                }
+            });
+		}); 
+
+        
+ 
+</script>
+
+
+    </body>
+   
+</html>

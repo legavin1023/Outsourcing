@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1022" height="1021" viewBox="0 0 1022 1021">
+    <defs>
+        <filter id="a" width="101.3%" height="102.1%" x="-.6%" y="-1.1%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2.896"/>
+        </filter>
+    </defs>
+    <path fill="none" fill-rule="evenodd" stroke="#46ACFE" d="M949.844 1160.25L1277.768 1488 1715 1053.6 1277.768 614l-437.232 437-273.268 273.123L294 1051l273.268-273.123 163.96 163.873" filter="url(#a)" transform="rotate(-45 104.455 1376.81)"/>
+</svg>
