@@ -223,7 +223,7 @@ background-image: url("../image/icon/next.png");
   height: 10px;
   display: inline-block;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
     transitions:1s;
 }
 button.swiper-pagination-bullet {
@@ -242,7 +242,7 @@ button.swiper-pagination-bullet {
 .swiper-pagination-bullet-active {
   width: 26px;
   height: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
    
 }
 .swiper-container-vertical > .swiper-pagination-bullets {
